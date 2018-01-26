@@ -1,0 +1,46 @@
+div.container {
+    background-color: transparent;
+}
+
+body {
+    background-color: black;
+    color: whitesmoke;
+}
+
+a {
+    color: #99ff99;
+}
+
+p {
+    font-family: "Shree Devanagari 714";
+    font-size: 20px;
+}
+
+hr {
+  margin: 30px 0px;
+  border: 2px solid rgb(86,168,206);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(86,168,206);
+  padding: 0;
+  animation: glow 1.5s ease-in-out infinite;
+  -webkit-animation: glow 3s ease-in-out infinite;
+    z-index: 1;
+}
+
+hr {
+    color: black;
+}
+
+textarea {
+    text-align: justify;
+}
+
+h1 {
+    font-family: 'Adobe Hebrew', Arial;
+}
+
+table {
+    font-size: 24px;
+    font-family: 'Adobe Hebrew', Arial
+}

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="col-md-8">
+
+      <hr>
+
+      <h1>Register</h1>
+        <div class="avatar-wrapper">
+
+          <form action="">
+              <table>
+                  <tr>
+                      <td class="table-left"><label for="nickLine">Nickname:</label></td>
+                      <td class="table-right"><input type="text" placeholder="mr_Manuel" id="nickLine"></td>
+                  </tr>
+
+                  <tr><td><br></td></tr>
+
+                  <tr>
+                      <td class="table-left"><label for="usr_email">Email:</label></td>
+                      <td class="table-right"><input type="email" placeholder="daft-forever@mail.ru" id="usr_email"></td>
+                  </tr>
+
+                  <tr><td><br></td></tr>
+
+                  <tr>
+                      <td class="table-left"><label for="usr_avatar">Avatar: </label></td>
+                      <td class="table-right"><img src="../static/img/daft_default.png" alt="" class="img-thumbnail input-img" id="usr_avatar"></td>
+                  </tr>
+
+                  <tr><td><br></td></tr>
+
+                  <tr>
+                      <td></td>
+                      <td class="table-right btn"><input type="file"></td>
+                  </tr>
+
+                  <tr><td><br></td></tr>
+
+                  <tr>
+                      <td></td>
+                      <td class="table-right"><button class="btn btn-primary">Register</button></td>
+                  </tr>
+              </table>
+          </form>
+        </div>
+
+      <form action="" method="post">
+        <div class="" style="color: red">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+            <button type="submit">Зарегистрироваться</button>
+        </div>
+      </form>
+
+
+      <br>
+    </div>
+{% endblock %}

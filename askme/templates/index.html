@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+  {% block content %}
+
+    {% if tag %}
+      <h1 style="margin-left: 100px;">Tag: {{tag}}</h1>
+    {% endif %}
+
+    <div class="col-md-8">
+      <hr>
+        {% for i in items %}
+          {% include "post_temp.html" %}
+        {% endfor %}
+
+        {% if pagination %}
+          {% include "pagination.html" %}
+        {% endif %}
+    </div>
+  {% endblock %}

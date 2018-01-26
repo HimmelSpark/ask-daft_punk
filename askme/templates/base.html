@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- -------------------------- -->
+<!-- 
+    <title>{{ title }}</title> -->
+    {% load static %}
+    <!-- linking bootsrap css files -->
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+    <!-- -------------------------- -->
+
+    <!-- linking my css files -->
+    <link rel="stylesheet" href="../static/css/custom-class.css">
+    <link rel="stylesheet" href="../static/css/custom-id.css">
+    <link rel="stylesheet" href="../static/css/custom-tag.css">
+    <link rel="stylesheet" href="../static/css/animations.css">
+    <link rel="stylesheet" href="../static/css/modalform.css">
+    <!-- -------------------------- -->
+
+</head>
+<body>
+
+<div id="num" hidden>0</div>
+
+<div class="container-fluid">
+    {% include "navbar.html" %}
+    {% if not user.is_authenticated %}
+        {% include "login.html" %}
+        {% include "reg.html" %}
+    {% endif %}
+ <br><br><br><br>
+
+    {% include "hot_and_new.html" %}
+
+ <div class="row">
+
+     {% block content %}
+        
+     {% endblock %}
+
+    <div class="col-md-8">
+
+      <hr>
+
+    </div>
+
+
+    <div class="col-sm-12 col-md-4 col-xs-4" id="sidebar">
+
+
+        <div class="row Tags">
+            <div class="col-sm-12 col-md-12 col-xs-12" >
+                <a id="tag-header">_Popular tags_</a>
+            </div>
+
+            <br><br>
+
+            <div class="col-sm-4 col-md-4 col-xs-4">
+                <a href="/daft-tag">WorkitHarder</a>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-xs-4"></div>
+
+            <div class="col-sm-4 col-md-4 col-xs-4">
+                <a>MakeitBetter</a>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-xs-4"></div>
+
+            <div class="col-sm-4 col-md-4 col-xs-4">
+                <a>DoitFaster</a>
+            </div>
+
+            <br><br>
+
+
+            <div class="col-sm-4 col-md-4 col-xs-4">
+                <a>MakesusStronger</a>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-xs-4"></div>
+
+
+            <div class="col-sm-4 col-md-4 col-xs-4">
+                <a>MorethanEver</a>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-xs-4"></div>
+
+            <div class="col-sm-4 col-md-4 col-xs-4">
+                <a>HourAfter</a>
+            </div>
+
+            <br><br>
+
+            <div class="col-sm-4 col-md-4 col-xs-4">
+                <a>OurWorkis</a>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-xs-4"></div>
+
+            <div class="col-sm-4 col-md-4 col-xs-4">
+                <a>NeverOwer</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row Members">
+            <div class="col-sm-12 col-md-12 col-xs-12">
+                <a id="member-header">_Top members_</a>
+            </div>
+
+                        <br><br>
+
+            <div class="col-sm-4 col-md-4 col-xs-4">
+                <a href="/daft-tag">Guy Manuel</a>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-xs-4"></div>
+
+            <div class="col-sm-4 col-md-4 col-xs-4">
+                <a>Bangaldter</a>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-xs-4"></div>
+
+            <div class="col-sm-4 col-md-4 col-xs-4">
+                <a>HimmelSpark98</a>
+            </div>
+
+            <br><br>
+
+
+            <div class="col-sm-4 col-md-4 col-xs-4">
+                <a>Skrillex</a>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-xs-4"></div>
+
+
+            <div class="col-sm-4 col-md-4 col-xs-4">
+                <a>Deadmau5</a>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-xs-4"></div>
+
+
+        </div>
+
+        <div class="row Tron">
+            <img src="../static/img/helmet.png" width="340" height="340" style="z-index: -1">
+        </div>
+    </div>
+
+ </div>
+
+
+</div>
+
+<footer class="footer">
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            &copy; Адамян Петрос АПО - 12
+        </div>
+    </div>
+</footer>
+
+    <!------- linking jQuery ------ -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <!-- -------------------------- -->
+
+
+    <!-- linking bootstrap js files -->
+    <script src="../static/js/bootstrap.js"></script>
+    <!-- -------------------------- -->
+
+
+    <!-- to import daft-font via cufon -->
+    <script type="text/javascript"> Cufon.replace("#daft-brand"); </script>
+    <script type="text/javascript"> Cufon.replace("#tag-header")</script>
+    <!-- -------------------------- -->
+
+
+    <!-- linking my js files -->
+    <script src="../static/js/custom.js"></script>
+    <script src="../static/js/cursor.js"></script>
+    <!-- -------------------------- -->
+
+
+</body>
+</html>

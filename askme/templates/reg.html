@@ -1,0 +1,38 @@
+<div id="modal_form2">
+        <span id="modal_close2">X</span>
+        <form role="form2" action="/daft-reg" method="POST" enctype="multipart/form-data" onsubmit="return regvalid(this)">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="LoginInputNickname">Nickname</label>
+                <input type="text" name="nickname" class="form-control" id="LoginInputNickname" placeholder="Enter Nickname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="LoginInputEmail">Email</label>
+                <input type="email" name="email" class="form-control" id="LoginInputEmail" placeholder="Enter Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="LoginInputPassword">Password</label>
+                <input type="password" name="password" class="form-control" id="LoginInputPassword" placeholder="Password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="LoginInputPassword">Password</label>
+                <input type="password" name="passwordconf" class="form-control" id="LoginInputPasswordConf" placeholder="Confirm Password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="LoginInputImg">Avatar</label>
+                <input type="file" name="avatar" class="form-control" id="LoginInputImg" required>
+            </div>
+
+            <div class="form-group">
+                <input type="hidden"  name="referer" value="{{ request.get_full_path }}" required>
+            </div>
+
+            <button type="submit" class="btn btn-default">Sign Up</button>
+        </form>
+    </div>
+    <div id="overlay2"></div>
+    <a href="#" class="modal2">Открыть модальное окно</a>

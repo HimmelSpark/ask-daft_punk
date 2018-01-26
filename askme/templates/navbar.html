@@ -1,0 +1,41 @@
+<div class="navbar navbar-inverse navbar-fixed-top" id="nav-bar">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand" id="daft_sign">Daft Punk</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Daft_Punk">About Daft Punk</a>
+            </li>
+
+            <li>
+                <a href='{% url 'index' %}' >Questions</a>
+            </li>
+            <li class="form-inline" id="nav_input">
+                <form action="/">
+                    <input class="form-control" type="text" placeholder="Search">
+                    <a class="btn" type="submit" href="{% url 'ask' %}">ASK!!!</a>
+                </form>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+                <li><a href="#" style="color: #94e7e2;">{{ user.username }}</a></li>
+                <li><a href={% url 'settings' %}>_Settings_</a></li>
+                <li><a href={% url 'logout' %}/?referer={{ request.get_full_path }} >_Log Out_</a></li>
+            {% else %}
+                <li><a  class="modal1" href={% url 'login' %}    >_Log In_</a></li>
+                <li><a  class="modal2" href={% url 'register' %} >_Register_</a></li>
+            {% endif %}
+
+          </ul>
+        </div>
+      </div>
+ </div>

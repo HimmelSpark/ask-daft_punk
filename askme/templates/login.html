@@ -1,0 +1,24 @@
+<div id="modal_form1">
+        <span id="modal_close1">X</span>
+        <form role="form" action="/daft-log" method="POST" onsubmit="return logvalid(this)">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="LoginInputEmail">Nickname</label>
+                <input type="text" name="nickname" class="form-control" id="LoginInputEmail" placeholder="Enter Nickname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="LoginInputPassword">Password</label>
+                <input type="password" name="password" class="form-control" id="LoginInputPassword" placeholder="Password" required>
+            </div>
+
+            <div class="form-group">
+                <input type="hidden"  name="referer" value="{{ request.get_full_path }}" required>
+            </div>
+
+            <button type="submit" class="btn btn-default">Sign In</button>
+        </form>
+    </div>
+
+    <div id="overlay1"></div>
+    <a href="#" class="modal1">Открыть модальное окно</a>

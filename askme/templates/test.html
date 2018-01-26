@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>daft-test</title>
+</head>
+<body>
+ <form action="http://127.0.0.1/daft-test" method="post">
+     {% csrf_token %}
+  <p><b>Как по вашему мнению расшифровывается аббревиатура &quot;ОС&quot;?</b></p>
+  <p><input type="radio" name="answer" value="post1">Офицерский состав<Br>
+  <input type="radio" name="answer" value="post2">Операционная система<Br>
+  <input type="radio" name="answer" value="post3">Большой полосатый мух</p>
+  <p><input type="submit"></p>
+ </form>
+
+ <form action="http://127.0.0.1/daft-test" method="get">
+     {% csrf_token %}
+  <p><b>Как по вашему мнению расшифровывается аббревиатура &quot;ОС&quot;?</b></p>
+  <p><input type="radio" name="answer" value="get1">Офицерский состав<Br>
+  <input type="radio" name="answer" value="get2">Операционная система<Br>
+  <input type="radio" name="answer" value="get3">Большой полосатый мух</p>
+  <p><input type="submit"></p>
+ </form>
+<p>
+    Your params:
+    {{ params }}
+</p>
+
+
+<form action="/daft-test/" method="post">
+    {% csrf_token %}
+    <label for="nickname">nickname </label>
+    <input id="your_name" type="text" name="nickname" value="{{ current_name }}">
+
+    <label for="email">email </label>
+    <input id="your_name" type="email" name="email" value="{{ current_name }}">
+
+    <label for="password">password </label>
+    <input id="your_name" type="password" name="password" value="{{ current_name }}">
+
+    <input type="submit" value="OK">
+</form>
+
+<p>Your nickname: {{ data }}</p>
+</body>
+</html>
+
+

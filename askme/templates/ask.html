@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="col-md-8">
+
+      <hr>
+
+      <h1 style="text-align: center">New Question</h1>
+
+      <form action="/daft-ask" style="margin: 10% 10% 5% 10%; color: brown;" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="title">Title<em>*</em></label>
+            {{ form.title }}
+        </div>
+
+        <div class="form-group">
+            <label for="text">Text: </label>
+            {{ form.text }}
+        </div>
+
+        <div class="form-group">
+            <label for="tags">Tags:</label>
+            {{ form.tags }}
+        </div>
+
+        <button type="submit" class="btn btn-primary">Ask</button>
+      </form>
+    </div>
+{% endblock %}

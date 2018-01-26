@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="col-md-8">
+
+      <hr>
+
+      <h1>Settings: Manuel</h1>
+        <div class="avatar-wrapper">
+
+          <form action="">
+              <table>
+                  <tr>
+                      <td class="table-left"><label for="nickLine">Nickname:</label></td>
+                      <td class="table-right"><input type="text" placeholder="mr_Manuel" id="nickLine"></td>
+                  </tr>
+
+                  <tr><td><br></td></tr>
+
+                  <tr>
+                      <td class="table-left"><label for="usr_email">Email:</label></td>
+                      <td class="table-right"><input type="email" placeholder="daft-forever@mail.ru" id="usr_email"></td>
+                  </tr>
+
+                  <tr><td><br></td></tr>
+
+                  <tr>
+                      <td class="table-left"><label for="usr_avatar">Avatar: </label></td>
+                      <td class="table-right"><img src="../static/img/daft_default.png" alt="" class="img-thumbnail input-img" id="usr_avatar"></td>
+                  </tr>
+
+                  <tr><td><br></td></tr>
+
+                  <tr>
+                      <td></td>
+                      <td class="table-right btn"><input type="file"></td>
+                  </tr>
+
+                  <tr><td><br></td></tr>
+
+                  <tr>
+                      <td></td>
+                      <td class="table-right"><button class="btn btn-primary">Save changes</button></td>
+                  </tr>
+              </table>
+          </form>
+        </div>
+
+
+
+      <br>
+    </div>
+{% endblock %}

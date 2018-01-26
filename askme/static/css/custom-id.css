@@ -1,0 +1,56 @@
+#nav-bar {
+    font-family: Furore;
+    color: royalblue;
+}
+
+
+#daft_sign {
+    font-family: 'Daft Font';
+    color: rgb(124,235,227);
+    font-size: 32px;
+
+    text-shadow: 0 0 15px royalblue;
+    animation: blin 0.5s linear, glowh1 1.5s ease-in-out infinite;
+    -webkit-animation: blin 0.5s linear, glowh1 1.5s ease-in-out infinite;
+}
+
+#nav_input {
+    margin-top: 8px;
+}
+
+#sidebar {
+    text-align: center;
+    position: fixed;
+    margin-left: 67%;
+    font-family: "Shree Devanagari 714";
+font-weight: bold;
+}
+
+@media (max-width: 994px) {
+    #sidebar {
+        position: relative;
+        width: 100% !important;
+        margin-left: -50px;
+    }
+
+}
+
+#tag-header {
+    font-family: 'Furore';
+    font-size: large;
+    color: lightpink;
+
+    text-shadow: 0 0 15px magenta;
+    animation: blin 0.5s linear, glowh1 1.5s ease-in-out infinite;
+    -webkit-animation: blin 0.5s linear, glowh1 1.5s ease-in-out infinite;
+}
+
+#member-header {
+    font-family: 'Furore';
+    font-size: large;
+    color: royalblue;
+
+    text-shadow: 0 0 15px blue;
+    animation: blin 0.5s linear, glowh1 1.5s ease-in-out infinite;
+    -webkit-animation: blin 0.5s linear, glowh1 1.5s ease-in-out infinite;
+}
